@@ -24,10 +24,16 @@ class TaskListInteractor : TaskListInteractorProtocol , TaskListDataStoreProtoco
     
     
     func didchangeTodo(){
-        //TODO: Burası Güncellenicek
+        getNewList()
     }
     
-    
+    func getNewList(){
+        if appContainer.ischange == true {
+            getdata()
+            appContainer.ischange = false
+        }
+        
+    }
     
     func getdata(){
         tasks = dataManager.fetchData()
