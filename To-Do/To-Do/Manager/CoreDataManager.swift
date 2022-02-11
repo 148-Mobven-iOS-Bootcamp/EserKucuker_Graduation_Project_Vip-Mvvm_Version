@@ -11,7 +11,7 @@ import CoreData
 class CoreDataManager : DataManagerProtocol {
     
     static let shared = CoreDataManager()
-    private init() {}
+    init() {}
     // MARK: - Core Data stack
     
     lazy var persistentContainer: NSPersistentContainer = {
