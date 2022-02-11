@@ -10,7 +10,7 @@ import Foundation
 struct Notification {
     var id : String
     var title : String
-    var subTitle : String
+    var detail : String
     var date: DateComponents
 }
 

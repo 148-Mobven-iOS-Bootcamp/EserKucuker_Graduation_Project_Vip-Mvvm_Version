@@ -51,7 +51,7 @@ class LocalNotificationManager  : NotificationManagerProtocol {
             let content = UNMutableNotificationContent()
             content.title = notification.title
             content.sound = .default
-            content.body = notification.subTitle
+            content.body = notification.detail
             let trigger = UNCalendarNotificationTrigger(dateMatching: notification.date, repeats: false)
             
             let request = UNNotificationRequest(identifier: notification.id, content: content, trigger: trigger)
