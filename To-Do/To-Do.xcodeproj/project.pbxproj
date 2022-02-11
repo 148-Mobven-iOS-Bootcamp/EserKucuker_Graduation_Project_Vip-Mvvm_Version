@@ -37,6 +37,8 @@
 		B844AB2C27B6F54F00B9853D /* TaskDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B844AB2B27B6F54F00B9853D /* TaskDetail.storyboard */; };
 		B844AB2F27B700B500B9853D /* AppContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B844AB2E27B700B500B9853D /* AppContainer.swift */; };
 		B844AB3127B7017B00B9853D /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B844AB3027B7017B00B9853D /* AppRouter.swift */; };
+		B844AB3427B70C4C00B9853D /* Validiator+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B844AB3327B70C4C00B9853D /* Validiator+.swift */; };
+		B844AB3627B70C7300B9853D /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B844AB3527B70C7300B9853D /* Date+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +93,8 @@
 		B844AB2B27B6F54F00B9853D /* TaskDetail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TaskDetail.storyboard; sourceTree = "<group>"; };
 		B844AB2E27B700B500B9853D /* AppContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContainer.swift; sourceTree = "<group>"; };
 		B844AB3027B7017B00B9853D /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		B844AB3327B70C4C00B9853D /* Validiator+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Validiator+.swift"; sourceTree = "<group>"; };
+		B844AB3527B70C7300B9853D /* Date+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +200,7 @@
 		B844AB0A27B6E93B00B9853D /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				B844AB3227B70C1F00B9853D /* Extentions */,
 				B844AB0B27B6E93B00B9853D /* Constants */,
 			);
 			path = Utility;
@@ -244,6 +249,15 @@
 				B844AA7527B6CBF600B9853D /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		B844AB3227B70C1F00B9853D /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				B844AB3327B70C4C00B9853D /* Validiator+.swift */,
+				B844AB3527B70C7300B9853D /* Date+.swift */,
+			);
+			path = Extentions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -394,8 +408,10 @@
 				B844AB2627B6F3A400B9853D /* TaskDetailContracts.swift in Sources */,
 				B844AB1427B6E93B00B9853D /* TaskListRouter.swift in Sources */,
 				B844AB1D27B6E93B00B9853D /* LocalNotificationManager.swift in Sources */,
+				B844AB3627B70C7300B9853D /* Date+.swift in Sources */,
 				B844AB1E27B6E93B00B9853D /* ManagerContracts.swift in Sources */,
 				B844AB1827B6E93B00B9853D /* TaskListViewController.swift in Sources */,
+				B844AB3427B70C4C00B9853D /* Validiator+.swift in Sources */,
 				B844AB2827B6F3B300B9853D /* TaskDetailPresentation.swift in Sources */,
 				B844AB3127B7017B00B9853D /* AppRouter.swift in Sources */,
 				B844AB1A27B6E93B00B9853D /* Constants.swift in Sources */,

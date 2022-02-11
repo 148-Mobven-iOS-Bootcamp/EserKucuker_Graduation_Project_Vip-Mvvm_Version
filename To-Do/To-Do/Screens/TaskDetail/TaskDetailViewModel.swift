@@ -35,9 +35,42 @@ class TaskDetailViewModel: TaskDetailViewModelProtocol{
     }
     
     func addTodo(task:TaskDetailPresentation) {
-        
-
-    }
+    
+        switch screenType {
+            
+        case .AddView:
+            notificationManager.listScheduledNotifications()
+            
+            if(task.endDate != nil){
+                addNotification(task:task)
+            }
+            else if (!isValidInput(Input:task.title)){
+                delegate?.handleOutput(.showAlert)
+                break
+            }
+            dataManager.saveData(task: task)
+            appContainer.ischange = true
+            delegate?.navigate(to: .saveAndBack)
+            
+        case .DetailView:
+            if  todoItem.title == task.title  && todoItem.detail == task.detail && todoItem.endDate == task.endDate  {
+                delegate?.navigate(to: .goBack)
+            } else {
+                notificationManager.deleteOldNotificationForUpdate(title: task.title)
+                dataManager.updateData(todoItem: todoItem, title: task.title, detail: task.detail, date: task.endDate)
+                
+                if(task.endDate != nil){
+                    addNotification(task:task)
+                }
+                appContainer.ischange = true
+                delegate?.navigate(to: .saveAndBack)
+                
+            }
+            
+        case .none:
+            print("Beklenmeyen Ekran Gecisi Gerceklesti.")
+        }    }
+    
     func addNotification(task:TaskDetailPresentation){
         let dateComponent = Calendar.current.dateComponents([.year,.month,.day, .hour, .minute], from: task.endDate!)
         let notification = Notification(id: UUID().uuidString, title: task.title, detail: task.detail, date: dateComponent)
