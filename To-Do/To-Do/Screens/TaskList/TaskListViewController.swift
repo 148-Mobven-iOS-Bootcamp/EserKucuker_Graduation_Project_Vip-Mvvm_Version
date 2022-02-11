@@ -11,7 +11,7 @@ class TaskListViewController: UIViewController, TaskListViewProtocol {
     
     @IBOutlet weak var TaskListTableView: UITableView!{
         didSet{
-            TaskListTableView.register(UITableViewCell.self, forCellReuseIdentifier: "identifier")
+            TaskListTableView.register(UITableViewCell.self, forCellReuseIdentifier: TaskIdentifierString.identifier.rawValue)
         }
     }
     @IBOutlet weak var emptyList: UIImageView!
@@ -97,7 +97,7 @@ extension TaskListViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "identifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: TaskIdentifierString.identifier.rawValue, for: indexPath)
         cell.textLabel?.text = tasks[indexPath.row].title
         return cell
     }
