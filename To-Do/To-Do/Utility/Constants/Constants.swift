@@ -17,3 +17,7 @@ struct Notification {
 enum TaskListBuilderString : String{
     case name = "TaskList"
 }
+
+enum TaskIdentifierString : String{
+    case identifier = "identifier"
+}
