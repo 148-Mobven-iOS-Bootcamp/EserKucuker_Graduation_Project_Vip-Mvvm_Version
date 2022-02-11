@@ -43,7 +43,26 @@ class TaskDetailTableViewController: UITableViewController,TaskDetailTableViewMo
     }
     
     func handleOutput(_ output: ViewModelOutput) {
-
+        switch output {
+        case .showToDoDetail(let taskDetailPresentation):
+            addTaskTappedButton.setTitle(TaskDetailViewController.addTaskButtonText.rawValue, for: .normal)
+            titleTextField.text = taskDetailPresentation.title
+            detailTextView.text = taskDetailPresentation.detail
+            reminderSwitch.isOn = deadLineDateLabel.text != ""
+            
+            if let endDate = taskDetailPresentation.endDate{
+                deadLineDateLabel.text = convertToString(date: endDate)
+            } else {
+                deadLineDateLabel.text = ""
+                
+            }
+            
+        case .showToDoAdd:
+            //TODO: buraya bakılıcak
+            reminderSwitch.isOn = deadLineDateLabel.text != ""
+        case.showAlert:
+            setAlert(messeges: "Hedef Başlığı Boş Olamaz")
+        }
     }
     
     
