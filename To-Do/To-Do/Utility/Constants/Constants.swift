@@ -21,3 +21,22 @@ enum TaskListBuilderString : String{
 enum TaskIdentifierString : String{
     case identifier = "identifier"
 }
+
+enum TaskDetailViewController: String{
+    case addTaskButtonText = "Update"
+    case alertMessage = "Lütfen Başlık Giriniz"
+}
+
+enum TaskListVC  : String {
+    case identifier = "identifier"
+    case titleForDeleteConfirmationButtonForRowAt = "Delete"
+}
+
+enum CoreData: String{
+    case name = "To_Do"
+    case entityName = "Tasks"
+    case key = "createdDate"
+    case title = "title"
+    case detail = "detail"
+    case deadlineDate = "endDate"
+}
