@@ -12,7 +12,7 @@ class TaskListBuilder {
     static func build() -> TaskListViewController {
         let storyboard = UIStoryboard(name: TaskListBuilderString.name.rawValue, bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: TaskListBuilderString.name.rawValue) as! TaskListViewController
-        let interactor = TaskListInteractor()
+        let interactor = TaskListInteractor(dataManager: appContainer.dataManager)
         let presenter = TaskListPresenter()
         let router = TaskListRouter()
 
