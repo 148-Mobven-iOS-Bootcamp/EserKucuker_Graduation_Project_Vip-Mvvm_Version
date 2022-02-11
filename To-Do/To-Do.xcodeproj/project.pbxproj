@@ -36,6 +36,7 @@
 		B844AB2A27B6F51000B9853D /* TaskDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B844AB2927B6F51000B9853D /* TaskDetailViewModel.swift */; };
 		B844AB2C27B6F54F00B9853D /* TaskDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B844AB2B27B6F54F00B9853D /* TaskDetail.storyboard */; };
 		B844AB2F27B700B500B9853D /* AppContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B844AB2E27B700B500B9853D /* AppContainer.swift */; };
+		B844AB3127B7017B00B9853D /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B844AB3027B7017B00B9853D /* AppRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,7 @@
 		B844AB2927B6F51000B9853D /* TaskDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailViewModel.swift; sourceTree = "<group>"; };
 		B844AB2B27B6F54F00B9853D /* TaskDetail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TaskDetail.storyboard; sourceTree = "<group>"; };
 		B844AB2E27B700B500B9853D /* AppContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContainer.swift; sourceTree = "<group>"; };
+		B844AB3027B7017B00B9853D /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,6 +236,7 @@
 		B844AB2D27B6FFF600B9853D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B844AB3027B7017B00B9853D /* AppRouter.swift */,
 				B844AB2E27B700B500B9853D /* AppContainer.swift */,
 				B844AA6427B6CBF400B9853D /* AppDelegate.swift */,
 				B844AA6627B6CBF400B9853D /* SceneDelegate.swift */,
@@ -394,6 +397,7 @@
 				B844AB1E27B6E93B00B9853D /* ManagerContracts.swift in Sources */,
 				B844AB1827B6E93B00B9853D /* TaskListViewController.swift in Sources */,
 				B844AB2827B6F3B300B9853D /* TaskDetailPresentation.swift in Sources */,
+				B844AB3127B7017B00B9853D /* AppRouter.swift in Sources */,
 				B844AB1A27B6E93B00B9853D /* Constants.swift in Sources */,
 				B844AB2327B6F34000B9853D /* TaskDetailTableViewController.swift in Sources */,
 				B844AB2F27B700B500B9853D /* AppContainer.swift in Sources */,
