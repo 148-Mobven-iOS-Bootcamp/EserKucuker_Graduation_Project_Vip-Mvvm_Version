@@ -15,3 +15,10 @@ protocol DataManagerProtocol {
     func sortbyCreatedData() -> [Tasks]
     func searchData(with : String) -> [Tasks]
 }
+
+protocol NotificationManagerProtocol {
+    var notifications : [Notification] { get set }
+    func listScheduledNotifications ()
+    func schedule()
+    func  deleteOldNotificationForUpdate(title : String)
+}
