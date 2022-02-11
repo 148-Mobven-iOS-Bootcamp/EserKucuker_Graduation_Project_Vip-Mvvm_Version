@@ -141,9 +141,9 @@
 		B844AA6327B6CBF400B9853D /* To-Do */ = {
 			isa = PBXGroup;
 			children = (
-				B844AB0D27B6E93B00B9853D /* Manager */,
 				B844AB0027B6E93B00B9853D /* Screens */,
 				B844AB0A27B6E93B00B9853D /* Utility */,
+				B844AB0D27B6E93B00B9853D /* Manager */,
 				B844AB2D27B6FFF600B9853D /* Resources */,
 				B844AA6A27B6CBF400B9853D /* Main.storyboard */,
 				B844AA7227B6CBF600B9853D /* LaunchScreen.storyboard */,
@@ -212,10 +212,10 @@
 		B844AB0D27B6E93B00B9853D /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				B844AB0E27B6E93B00B9853D /* CoreDataManager.swift */,
-				B844AB0F27B6E93B00B9853D /* TaskDTO.swift */,
-				B844AB1027B6E93B00B9853D /* LocalNotificationManager.swift */,
 				B844AB1127B6E93B00B9853D /* ManagerContracts.swift */,
+				B844AB0E27B6E93B00B9853D /* CoreDataManager.swift */,
+				B844AB1027B6E93B00B9853D /* LocalNotificationManager.swift */,
+				B844AB0F27B6E93B00B9853D /* TaskDTO.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
