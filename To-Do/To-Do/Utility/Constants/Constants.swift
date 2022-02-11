@@ -13,3 +13,7 @@ struct Notification {
     var subTitle : String
     var date: DateComponents
 }
+
+enum TaskListBuilderString : String{
+    case name = "TaskList"
+}
