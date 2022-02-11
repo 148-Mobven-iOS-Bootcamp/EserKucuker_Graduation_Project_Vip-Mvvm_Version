@@ -67,13 +67,17 @@ class TaskDetailTableViewController: UITableViewController,TaskDetailTableViewMo
     
     
     func navigate(to route: DetailViewRouter) {
-
+        switch route {
+        case .goBack:
+            self.navigationController?.popToRootViewController(animated: true)
+        case .saveAndBack:
+            self.navigationController?.popToRootViewController(animated: true)
+        }
     }
     
     @IBAction func addTaskButtonTapped(_ sender: UIButton) {
 
     }
-    
     func setAlert(messeges: String){
         
         let alert = UIAlertController(title: "Uyarı", message: messeges, preferredStyle: .alert)
@@ -93,6 +97,7 @@ class TaskDetailTableViewController: UITableViewController,TaskDetailTableViewMo
     
     
     @IBAction func datePickerChanged(_ sender: UIDatePicker) {
+        deadLineDateLabel.text = convertToString(date: sender.date)
     }
     
     @IBAction func reminderSwitchChanged(_ sender: UISwitch) {
