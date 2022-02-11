@@ -76,7 +76,17 @@ class TaskDetailTableViewController: UITableViewController,TaskDetailTableViewMo
     }
     
     @IBAction func addTaskButtonTapped(_ sender: UIButton) {
-
+        guard let title = titleTextField.text,
+              let detail = detailTextView.text else {
+                  print(" Veriler Artık Options Değil ");return }
+        if(reminderSwitch.isOn && deadLineDateLabel.text == ""){
+            setAlert(messeges: "Lüften Tarih seciniz")
+        }
+        else {
+            let task = TaskDetailPresentation(title: title, detail: detail, endDate: reminderSwitch.isOn ? datePicker.date : nil)
+            viewModel.addTodo(task: task)
+            
+        }
     }
     func setAlert(messeges: String){
         
@@ -101,6 +111,9 @@ class TaskDetailTableViewController: UITableViewController,TaskDetailTableViewMo
     }
     
     @IBAction func reminderSwitchChanged(_ sender: UISwitch) {
+        deadLineDateLabel.textColor = (reminderSwitch.isOn ? .black : .lightGray )
+        tableView.beginUpdates()
+        tableView.endUpdates()
     }
 }
 // MARK: - Table view data source
