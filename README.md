@@ -47,7 +47,7 @@ Iphone Screenshots  And Videos
 ===========
 | Main Screen | Add & Update |
 | ----------- | ------------ |
-| ![image](https://github.com/148-Mobven-iOS-Bootcamp/EserKucuker_Graduation_Project_Vip-Mvvm_Version/blob/developer/Readme/Ekran%20Resmi%202022-02-12%2012.53.31.png) | ![image](https://github.com/148-Mobven-iOS-Bootcamp/EserKucuker_Graduation_Project_Vip-Mvvm_Version/blob/Readme/Readme/IphoneAddTask.png) |
+| ![image](https://github.com/148-Mobven-iOS-Bootcamp/EserKucuker_Graduation_Project_Vip-Mvvm_Version/blob/Readme/Readme/IphaneMainWindow.png) | ![image](https://github.com/148-Mobven-iOS-Bootcamp/EserKucuker_Graduation_Project_Vip-Mvvm_Version/blob/Readme/Readme/IphoneAddTask.png) |
 
 | Sort by Create Date | Search To-Do | 
 | ------------------- | ------------ | 
@@ -67,7 +67,7 @@ Iphone Screenshots  And Videos
 
 | ![image](https://github.com/148-Mobven-iOS-Bootcamp/EserKucuker_Graduation_Project_Vip-Mvvm_Version/blob/Readme/Readme/%C4%B0phoneError.png) |
 
-Ipad Screenshots  And Videos
+Ipad Screenshots
 ===========
 
 | Main Screen | Add & Update |
