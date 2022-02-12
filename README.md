@@ -55,11 +55,11 @@ Iphone Screenshots  And Videos
 
 | Create To-Do | Update To-Do | Dismiss Detail Screen |
 | ------------ | ------------ | --------------------- |
-| ![image](https://github.com/148-Mobven-iOS-Bootcamp/EserKucuker_Graduation_Project_Vip-Mvvm_Version/blob/Readme/Readme/AddTodo.gif) | ![image](https://github.com/148-Mobven-iOS-Bootcamp/EserKucuker_Graduation_Project_Vip-Mvvm_Version/blob/Readme/Readme/ezgif.com-gif-maker%20(4).gif) | ![image](https://github.com/148-Mobven-iOS-Bootcamp/EserKucuker_Graduation_Project_Vip-Mvvm_Version/blob/Readme/Readme/IphoneDelete.gif) |
+| ![image](https://github.com/148-Mobven-iOS-Bootcamp/EserKucuker_Graduation_Project_Vip-Mvvm_Version/blob/Readme/Readme/AddTodo.gif) | ![image](https://github.com/148-Mobven-iOS-Bootcamp/EserKucuker_Graduation_Project_Vip-Mvvm_Version/blob/Readme/Readme/update.gif) | ![image](https://github.com/148-Mobven-iOS-Bootcamp/EserKucuker_Graduation_Project_Vip-Mvvm_Version/blob/Readme/Readme/IphoneDelete.gif) |
 
-| Notification | Notification When App Close | 
-| ------------------- | ------------ | 
-| ![image](https://github.com/148-Mobven-iOS-Bootcamp/EserKucuker_Graduation_Project_Vip-Mvvm_Version/blob/Readme/Readme/Notification.gif) | ![image](https://github.com/148-Mobven-iOS-Bootcamp/EserKucuker_Graduation_Project_Vip-Mvvm_Version/blob/Readme/Readme/InAppNotification.gif) |
+| Notification When App Close | 
+| ------------ | 
+ ![image](https://github.com/148-Mobven-iOS-Bootcamp/EserKucuker_Graduation_Project_Vip-Mvvm_Version/blob/Readme/Readme/Notificationout%20app.gif) |
 
 
 | Notification |
