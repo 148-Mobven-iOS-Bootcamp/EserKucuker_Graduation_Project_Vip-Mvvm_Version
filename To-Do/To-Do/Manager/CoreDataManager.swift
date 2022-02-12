@@ -10,9 +10,6 @@ import CoreData
 
 class CoreDataManager : DataManagerProtocol {
     
-    static let shared = CoreDataManager()
-    init() {}
-    let manageContext = shared.persistentContainer.viewContext
     // MARK: - Core Data stack
     
     lazy var persistentContainer: NSPersistentContainer = {
@@ -20,6 +17,7 @@ class CoreDataManager : DataManagerProtocol {
         let container = NSPersistentContainer(name: "To_Do")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
+                
                 fatalError("Unresolved error \(error), \(error.userInfo)")
             }
         })
@@ -29,10 +27,12 @@ class CoreDataManager : DataManagerProtocol {
     // MARK: - Core Data Saving support
     
     func saveContext () {
-        if manageContext.hasChanges {
+        let context = persistentContainer.viewContext
+        if context.hasChanges {
             do {
-                try manageContext.save()
+                try context.save()
             } catch {
+                
                 let nserror = error as NSError
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }
@@ -41,95 +41,96 @@ class CoreDataManager : DataManagerProtocol {
     
     
     
-    func updateData(todoItem: Tasks, title: String, detail: String, date: Date?) {
+    func updateData(todoItem: Tasks, title: String, detail: String, date: Date?){
+        let manageContext = persistentContainer.viewContext
         todoItem.title = title
         todoItem.detail = detail
         todoItem.endDate = date
         todoItem.createdDate = Date()
         
-        if manageContext.hasChanges{
-            save(message: "Başarıyla veriler güncellendi", with: "Veriler güncellenemedi ")
+        do {
+            if manageContext.hasChanges{
+                try manageContext.save()
+                print("Basariyla  Guncellendi.")
+            }
+        } catch  {
+            print("Guncelleme Basarisiz oldu")
+            debugPrint("Guncelleme hatasi: \(error.localizedDescription)")
         }
     }
     
     func saveData(task: TaskDetailPresentation) {
+        let manageContext = persistentContainer.viewContext
         let model = Tasks(context: manageContext )
         model.title = task.title
         model.detail = task.detail
         model.endDate = task.endDate
         model.createdDate = Date()
-        
-        if manageContext.hasChanges{
-            save(message: "Başarıyla veriler Eklendi", with: "Veriler Eklenemedi ")
+        do {
+            if manageContext.hasChanges{
+                try  manageContext.save()
+                print("Basariyla kaydedildi.")
+            }
+        } catch
+        {
+            debugPrint("Kaydetme hatasi: \(error.localizedDescription)")
         }
-        
     }
     
     func fetchData() -> [Tasks] {
         let request = NSFetchRequest<Tasks>(entityName: "Tasks")
-        //let manageContext = persistentContainer.viewContext
+        let manageContext = persistentContainer.viewContext
         request.returnsObjectsAsFaults = false
         
-        //        do {
-        //            let result = try manageContext.fetch(request)
-        //            print("Tasks alındı")
-        //            return result
-        //
-        //        } catch {
-        //            debugPrint("Veri Cekme hatasi: \(error.localizedDescription)")
-        //        }
-        return fetch(message: "Tasks alındı", with: "Veri Cekme hatasi", request: request)
-        
+        do {
+            let result = try manageContext.fetch(request)
+            print("CoreData Verileri Basariyla alindi.")
+            return result
+            
+        } catch {
+            debugPrint("Veri Cekme hatasi: \(error.localizedDescription)")
+        }
+        return []
     }
     
     func deleteData(todoItem: Tasks) {
-        //let manageContext = persistentContainer.viewContext
+        let manageContext = persistentContainer.viewContext
         manageContext.delete(todoItem)
-        save(message: "Başarıyla veriler silindi", with: "Silme hatasi")
+        do {
+            try  manageContext.save()
+            print("Basariyla Silindi.")
+        } catch  {
+            debugPrint("Silme hatasi: \(error.localizedDescription)")
+        }
     }
     
     func sortbyCreatedData() -> [Tasks] {
-        // let manageContext = persistentContainer.viewContext
+        let manageContext = persistentContainer.viewContext
         let request = NSFetchRequest<Tasks>(entityName: "Tasks")
         let sorter = NSSortDescriptor(key: "createdDate", ascending: false)
         request.sortDescriptors = [sorter]
         request.returnsObjectsAsFaults = false
-        //        do {
-        //            let result = try manageContext.fetch(request)
-        //            print("Result : \(result)")
-        //            return result
-        //
-        //        } catch {
-        //            debugPrint("Siralama hatasi: \(error.localizedDescription)")
-        //        }
-        return fetch(message: "Sıralama Başarılı", with: "Siralama hatasi", request: request)
-        
-        
+        do {
+            let result = try manageContext.fetch(request)
+            print("Result : \(result)")
+            return result
+            
+        } catch {
+            debugPrint("Siralama hatasi: \(error.localizedDescription)")
+        }
+        return []
     }
     
     func searchData(with: String) -> [Tasks] {
-        // let manageContext = persistentContainer.viewContext
+        let manageContext = persistentContainer.viewContext
         let request = NSFetchRequest<Tasks>(entityName: "Tasks")
         request.predicate = NSPredicate(format: "title contains[c] '\(with)'")
-        return fetch(message: "", with: "Arama Hatası", request: request)
         
-    }
-    
-    func save(message: String, with: String){
-        do {
-            try  manageContext.save()
-            print(message)
-        } catch  {
-            debugPrint( with + ": \(error.localizedDescription)")
-        }
-    }
-    
-    func fetch(message: String?, with: String, request : NSFetchRequest<Tasks>)-> [Tasks]{
         do {
             let data = try manageContext.fetch(request)
             return data
         } catch  {
-            debugPrint( with + ": \(error.localizedDescription)")
+            debugPrint("Arama hatasi: \(error.localizedDescription)")
         }
         return []
     }
