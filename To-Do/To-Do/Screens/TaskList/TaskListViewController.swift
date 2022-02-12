@@ -25,7 +25,7 @@ class TaskListViewController: UIViewController, TaskListViewProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.setupHideKeyboardWhenTapOutside()
         interactor?.viewDidLoad()
     }
     
