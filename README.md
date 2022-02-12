@@ -27,9 +27,11 @@ Technologies
 
 Features
 ========
-+ Cell animation
++ Add To-Do
++ Update To-Do
++ Sorted To-Do
++ Search To-Do
 + Delete To-Do
-+ Filter by color
 + Unit & UI Tests
 
 Installation
