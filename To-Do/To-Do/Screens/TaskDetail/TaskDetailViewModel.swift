@@ -44,7 +44,7 @@ class TaskDetailViewModel: TaskDetailViewModelProtocol{
             if(task.endDate != nil){
                 addNotification(task:task)
             }
-            else if (!isValidInput(Input:task.title)){
+            else if (task.title.count<=0 || task.title == " " ){
                 delegate?.handleOutput(.showAlert)
                 break
             }
