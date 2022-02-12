@@ -33,8 +33,8 @@ class TaskDetailTableViewController: UITableViewController,TaskDetailTableViewMo
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.didLoad()
-      
-        
+        self.setupHideKeyboardWhenTapOutside()
+
     }
     
     override func viewWillAppear(_ animated: Bool) {

@@ -39,6 +39,7 @@
 		B844AB3127B7017B00B9853D /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B844AB3027B7017B00B9853D /* AppRouter.swift */; };
 		B844AB3427B70C4C00B9853D /* Validiator+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B844AB3327B70C4C00B9853D /* Validiator+.swift */; };
 		B844AB3627B70C7300B9853D /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B844AB3527B70C7300B9853D /* Date+.swift */; };
+		B844AB3827B7B4E100B9853D /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B844AB3727B7B4E100B9853D /* UIViewController+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,7 @@
 		B844AB3027B7017B00B9853D /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		B844AB3327B70C4C00B9853D /* Validiator+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Validiator+.swift"; sourceTree = "<group>"; };
 		B844AB3527B70C7300B9853D /* Date+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
+		B844AB3727B7B4E100B9853D /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -256,6 +258,7 @@
 			children = (
 				B844AB3327B70C4C00B9853D /* Validiator+.swift */,
 				B844AB3527B70C7300B9853D /* Date+.swift */,
+				B844AB3727B7B4E100B9853D /* UIViewController+.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -410,6 +413,7 @@
 				B844AB1D27B6E93B00B9853D /* LocalNotificationManager.swift in Sources */,
 				B844AB3627B70C7300B9853D /* Date+.swift in Sources */,
 				B844AB1E27B6E93B00B9853D /* ManagerContracts.swift in Sources */,
+				B844AB3827B7B4E100B9853D /* UIViewController+.swift in Sources */,
 				B844AB1827B6E93B00B9853D /* TaskListViewController.swift in Sources */,
 				B844AB3427B70C4C00B9853D /* Validiator+.swift in Sources */,
 				B844AB2827B6F3B300B9853D /* TaskDetailPresentation.swift in Sources */,
