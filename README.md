@@ -57,9 +57,9 @@ Iphone Screenshots  And Videos
 | ------------ | ------------ | --------------------- |
 | ![image](https://github.com/148-Mobven-iOS-Bootcamp/EserKucuker_Graduation_Project_Vip-Mvvm_Version/blob/Readme/Readme/AddTodo.gif) | ![image](https://github.com/148-Mobven-iOS-Bootcamp/EserKucuker_Graduation_Project_Vip-Mvvm_Version/blob/Readme/Readme/update.gif) | ![image](https://github.com/148-Mobven-iOS-Bootcamp/EserKucuker_Graduation_Project_Vip-Mvvm_Version/blob/Readme/Readme/IphoneDelete.gif) |
 
-| Notification | Notification When App Close | 
-| ------------------- | ------------ | 
-| ![image](https://github.com/148-Mobven-iOS-Bootcamp/EserKucuker_Graduation_Project_Vip-Mvvm_Version/blob/Readme/Readme/Notification.gif) | ![image](https://github.com/148-Mobven-iOS-Bootcamp/EserKucuker_Graduation_Project_Vip-Mvvm_Version/blob/Readme/Readme/Notificationout%20app.gif) |
+| Notification When App Close | 
+| ------------ | 
+ ![image](https://github.com/148-Mobven-iOS-Bootcamp/EserKucuker_Graduation_Project_Vip-Mvvm_Version/blob/Readme/Readme/Notificationout%20app.gif) |
 
 
 | Notification |
